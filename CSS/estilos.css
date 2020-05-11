@@ -1,0 +1,37 @@
+body {
+    background-image: url(https://image.freepik.com/vetores-gratis/ilustracao-em-vetor-futurista-3d_73458-361.jpg);
+    background-size: auto 225vh;
+    font-family: Arial;
+    height: 100vh;
+  }
+  
+  .menu {
+    background-image: url(http://images.gofreedownload.net/2/solid-triangle-background-58967.jpg);
+  }
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle,
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  .site-subtitle {
+    font-style: italic;
+  }
+  
