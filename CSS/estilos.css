@@ -8,7 +8,7 @@
 body {
     background-image: url(https://image.freepik.com/vetores-gratis/ilustracao-em-vetor-futurista-3d_73458-361.jpg);
     background-size: auto 225vh;
-    font-family: Arial;
+    font-family: 'Source Code Pro', monospace;
     height: 100vh;
     font-size: 12px;
   }
@@ -77,14 +77,73 @@ header {
 
   .site-title {
     font-size: 4em;
+    font-family: 'Dancing Script', cursive;
   }
   
   .site-subtitle {
     font-style: italic;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .Portfólio {
+    padding: 2em;
+    height: 100vh;
+  } 
+
+  .Portfólio h2 {
+    color: whitesmoke;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 1.5em;
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  .Portfólio .grid {
+    display: grid;
+    gap: 2em;
+    color: whitesmoke;
+  }
+  
+  @media (min-width: 560px) {
+    .Portfólio .grid {
+      color: whitesmoke;
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .Portfólio .grid {
+      color: whitesmoke;
+      align-content:center;
+      grid-template-columns: repeat(3, 240px);
+      justify-content: center;
+      height: calc(100vh - 4.5em - 48px);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .Portfólio .grid {
+      color: whitesmoke;
+      grid-template-columns: repeat(4, 240px);
+      justify-content: center;
+    }
+  }
+
+  .Portfólio figure{
+    text-align: center;
   }
 
   .img-portfolio {
     height: 180px;
-    width: 180px;
+    width: 240px;
+    object-fit: cover;
+    
+    border-radius: 15px;
   }
 
+ /* @media (min-width: 1200px) {
+    .img-portfolio {
+      height: auto;
+      width: 100%;
+    }
+  }*/
