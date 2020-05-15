@@ -1,19 +1,21 @@
 /* soft reset do css */
-*{
+
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
 body {
-    background-image: url(https://image.freepik.com/vetores-gratis/ilustracao-em-vetor-futurista-3d_73458-361.jpg);
-    background-size: auto 225vh;
-    font-family: 'Source Code Pro', monospace;
-    height: 100vh;
-    font-size: 12px;
-  }
+  background-image: url(https://image.freepik.com/vetores-gratis/ilustracao-em-vetor-futurista-3d_73458-361.jpg);
+  background-size: auto 225vh;
+  font-family: 'Source Code Pro', monospace;
+  height: 100vh;
+  font-size: 12px;
+}
 
-  /* se a tela tiver pelomenos 400px vai carregar estes estilos */
+/* se a tela tiver pelomenos 400px vai carregar estes estilos */
+
 @media (min-width: 400px) {
   body {
     font-size: 14px;
@@ -21,6 +23,7 @@ body {
 }
 
 /* breakpoint*/
+
 @media (min-width: 600px) {
   body {
     font-size: 18px;
@@ -28,6 +31,7 @@ body {
 }
 
 /* breakpoint*/
+
 @media (min-width: 1200px) {
   body {
     font-size: 20px;
@@ -40,149 +44,233 @@ header {
   justify-content: center;
   align-items: center;
 }
-  
-  .menu {
-    background-image: url(http://images.gofreedownload.net/2/solid-triangle-background-58967.jpg);
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    z-index: 1;
-  }
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .menu li {
-    list-style: none;
-  }
 
-  .menu a {
-    display: block;
-    padding: 10px 20px; 
-    transition: background-color 1s;   
-  }
+.menu {
+  background-image: url(http://images.gofreedownload.net/2/solid-triangle-background-58967.jpg);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
 
-  .menu a:active,
-  .menu a:hover{
-    background-color: teal;
-  }
-  
-  a {
-    color: whitesmoke;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
 
-  .titulo {
-    transform: scale(0.2) translate(50vh);
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:active, .menu a:hover {
+  background-color: teal;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: 1s ease 500ms introtitulo forwards;
+}
+
+@keyframes introtitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
     opacity: 0;
-    
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
 
-    animation: linear 2s introtitulo forwards;
-  }
+.site-subtitle, .site-title {
+  color: whitesmoke;
+  text-align: center;
+}
 
-  @keyframes introtitulo{
-    100%{
-      transform: scale(1) translate(0);
-      opacity: 1;
-    }
-  }
-  
-  .site-subtitle,
-  .site-title {
-    color: whitesmoke;
-    text-align: center;
-  }
+.site-title {
+  font-size: 4em;
+  font-family: 'Dancing Script', cursive;
+}
 
-  .site-title {
-    font-size: 4em;
-    font-family: 'Dancing Script', cursive;
-  }
-  
-  .site-subtitle {
-    font-style: italic;
-    font-family: 'Press Start 2P', cursive;
-  }
+.site-subtitle {
+  font-style: italic;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.8em;
+}
 
-  .contato,
-  .Portfólio {
-    padding: 3em;
-    min-height: 100vh;
-  } 
+.sobre, .contato, .Portfólio {
+  padding: 3em;
+  min-height: 100vh;
+}
 
-  .contato h2,
-  .Portfólio h2 {
-    color: whitesmoke;
-    font-family: 'Press Start 2P', cursive;
-    margin-bottom: 1.5em;
-    font-size: 1.3em;
-    text-align: center;
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
   }
-  
+}
+
+.sobre h2, .contato h2, .Portfólio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+.sobre p {
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  text-indent: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  color: white;
+  text-decoration: underline;
+}
+
+.sobre a:hover {
+  background-color: cyan;
+  text-decoration: none;
+  color: purple;
+}
+
+.sobre .avatar {
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+  margin-left: 2em;
+}
+
+.sobre .avatar img {
+  width: 250px;
+  height: 250px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    float: right;
+  }
+}
+
+.Portfólio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 400px) {
   .Portfólio .grid {
-    display: grid;
-    gap: 2em;
     color: whitesmoke;
+    grid-template-columns: 240p;
   }
-  
-  @media (min-width: 560px) {
-    .Portfólio .grid {
-      color: whitesmoke;
-      grid-template-columns: 240px 240px;
-    }
+}
+
+@media (min-width: 560px) {
+  .Portfólio .grid {
+    color: whitesmoke;
+    grid-template-columns: 240px 240px;
   }
+}
 
-  @media (min-width: 880px) {
-    .Portfólio .grid {
-      color: whitesmoke;
-      align-content:center;
-      grid-template-columns: repeat(3, 240px);
-      justify-content: center;
-      height: calc(100vh - 4.5em - 48px);
-    }
+@media (min-width: 880px) {
+  .Portfólio .grid {
+    color: whitesmoke;
+    align-content: center;
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
   }
+}
 
-  @media (min-width: 1200px) {
-    .Portfólio .grid {
-      color: whitesmoke;
-      grid-template-columns: repeat(4, 240px);
-      justify-content: center;
-    }
+@media (min-width: 1200px) {
+  .Portfólio .grid {
+    color: whitesmoke;
+    grid-template-columns: repeat(4, 260px);
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
   }
+}
 
-  .Portfólio figure{
-    text-align: center;
-  }
+.flip-card {
+  height: 180px;
+  perspective: 500px;
+}
 
-  .img-portfolio {
-    height: 180px;
-    width: 240px;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 500ms;
-  }
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
 
-  .img-portfolio:hover{
-    transform: scale(1.1);
-  }
+.card {
+  transition: transform 3s;
+  transform-style: preserve-3d;
+  position: relative;
+}
 
+.card-front, .card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
-  .contato .icons {
-    text-align: center;
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 3, 63, 0.7);
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+  border-radius: 15px;
+}
 
-  }
+.Portfólio figure {
+  text-align: center;
+}
 
-  .contato a {
-      color: whitesmoke;
-      font-size: 4em;
-      transition: text-shadow 1s;
-    }
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 15px;
+  transition: transform 500ms;
+}
 
-  .contato a:active,
-  .contato a:hover {
-      text-decoration: none;
-      text-shadow: 0px 0px 10px rgba(255, 255, 255, .9);
-    }
+/*.img-portfolio:hover {
+  transform: scale(1.2) rotate(-2deg);
+}*/
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active, .contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgb(239, 243, 6);
+}
